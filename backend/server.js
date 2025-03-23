@@ -1,9 +1,11 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors'); // Import CORS
 require('dotenv').config();
 
 const app = express();
 app.use(express.json());
+app.use(cors()); // Enable CORS for all routes
 
 // Hugging Face API details
 const HF_API_TOKEN = process.env.HUGGING_FACE_API_TOKEN;
