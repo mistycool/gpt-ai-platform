@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image and Video Generator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="menu-icon">☰</div>
+    <nav class="menu">
+      <ul>
+        <li><a href="#image-upload">Image Upload</a></li>
+        <li><a href="#video-upload">Video Upload</a></li>
+        <li><a href="#generate">Generate Image</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="image-upload">
+    <h2>Upload Image</h2>
+    <input type="file" id="file-upload" accept="image/*">
+    <div id="output"></div>
+  </div>
+
+  <div id="video-upload">
+    <h2>Upload Video</h2>
+    <input type="file" id="video-upload-input" accept="video/*">
+    <div id="video-output"></div>
+  </div>
+
+  <div id="text-to-image">
+    <h2>Text to Image</h2>
+    <input type="text" id="text-input" placeholder="Enter text to generate image">
+    <button id="generate-button">Generate</button>
+    <div id="output-image"></div>
+  </div>
+
+  <div id="audio-output">
+    <h2>Text to Speech</h2>
+    <textarea id="text-input" placeholder="Enter text for speech"></textarea>
+    <button id="speak-button">Speak</button>
+    <audio id="audio-output" controls></audio>
+  </div>
+
+  <footer>
+    <p>Generated using Hugging Face API and Web Speech API</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
